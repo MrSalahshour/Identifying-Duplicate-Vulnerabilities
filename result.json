@@ -1,0 +1,382 @@
+[
+  {
+    "cluster": "group_1",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "Application config files are publicly accessible, causing information disclosure.",
+        "endpoint": "/config",
+        "id": 773,
+        "sensor": "ToolA",
+        "severity": "low",
+        "title": "Information disclosure in config"
+      },
+      {
+        "cve": "null",
+        "description": "Leaking configuration data at /config can give attackers insights into the system.",
+        "endpoint": "/config",
+        "id": 763,
+        "sensor": "ToolC",
+        "severity": "medium",
+        "title": "Config information disclosure"
+      },
+      {
+        "cve": "null",
+        "description": "Attackers can achieve code execution on the server via /config if not patched.",
+        "endpoint": "/config",
+        "id": 772,
+        "sensor": "ToolD",
+        "severity": "high",
+        "title": "Remote Code Execution at /config"
+      }
+    ]
+  },
+  {
+    "cluster": "group_2",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2022-5555",
+        "description": "Sensitive data in config is exposed, leading to information disclosure issues.",
+        "endpoint": "/config",
+        "id": 776,
+        "sensor": "ToolB",
+        "severity": "high",
+        "title": "Public config leads to info disclosure"
+      },
+      {
+        "cve": "CVE-2022-5555",
+        "description": "A critical misconfiguration in /config reveals sensitive credentials and secrets.",
+        "endpoint": "/config",
+        "id": 779,
+        "sensor": "ToolD",
+        "severity": "critical",
+        "title": "Misconfigured config endpoint"
+      }
+    ]
+  },
+  {
+    "cluster": "group_3",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "/session endpoint fails to renew session IDs. causing session fixation attacks.",
+        "endpoint": "/session",
+        "id": 777,
+        "sensor": "ToolC",
+        "severity": "high",
+        "title": "Session fixation in session"
+      },
+      {
+        "cve": "null",
+        "description": "Session fixation bug discovered in /session endpoint enables reusing another users session token.",
+        "endpoint": "/session",
+        "id": 786,
+        "sensor": "ToolB",
+        "severity": "high",
+        "title": "Session fixation discovered"
+      }
+    ]
+  },
+  {
+    "cluster": "group_4",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-0004",
+        "description": "Session fixation in /session allows attackers to hijack valid sessions after login.",
+        "endpoint": "/session",
+        "id": 795,
+        "sensor": "ToolA",
+        "severity": "high",
+        "title": "Session fixation vulnerability"
+      },
+      {
+        "cve": "CVE-2025-0004",
+        "description": "A critical session fixation flaw in /session can compromise user accounts.",
+        "endpoint": "/session",
+        "id": 797,
+        "sensor": "ToolD",
+        "severity": "critical",
+        "title": "Session fixation flaw"
+      }
+    ]
+  },
+  {
+    "cluster": "group_5",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "Cart checkout page is susceptible to CSRF attacks through unprotected forms.",
+        "endpoint": "/cart",
+        "id": 782,
+        "sensor": "ToolB",
+        "severity": "medium",
+        "title": "CSRF vulnerability in cart checkout"
+      },
+      {
+        "cve": "null",
+        "description": "A CSRF vulnerability in the cart checkout flow can allow malicious form submissions.",
+        "endpoint": "/cart",
+        "id": 801,
+        "sensor": "ToolA",
+        "severity": "medium",
+        "title": "CSRF in cart checkout"
+      }
+    ]
+  },
+  {
+    "cluster": "group_6",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "Reflected XSS discovered in profile endpoint, enabling malicious script execution.",
+        "endpoint": "/profile",
+        "id": 790,
+        "sensor": "ToolC",
+        "severity": "medium",
+        "title": "Reflected XSS on user profile"
+      },
+      {
+        "cve": "null",
+        "description": "The /profile endpoint can be exploited to run arbitrary commands on the server.",
+        "endpoint": "/profile",
+        "id": 793,
+        "sensor": "ToolB",
+        "severity": "critical",
+        "title": "Remote code execution found at /profile"
+      },
+      {
+        "cve": "null",
+        "description": "Profile authorization bypass could let normal user's access privileged info.",
+        "endpoint": "/profile",
+        "id": 794,
+        "sensor": "ToolB",
+        "severity": "medium",
+        "title": "Profile authorization bypass"
+      },
+      {
+        "cve": "null",
+        "description": "A Cross-Site Scripting (XSS) issue in the user profile page allows script injection.",
+        "endpoint": "/profile",
+        "id": 762,
+        "sensor": "ToolA",
+        "severity": "medium",
+        "title": "XSS in user profile"
+      },
+      {
+        "cve": "null",
+        "description": "Profile page is vulnerable to XSS if user-provided scripts are not sanitized.",
+        "endpoint": "/profile",
+        "id": 764,
+        "sensor": "ToolB",
+        "severity": "high",
+        "title": "Cross-Site Scripting in profile page"
+      }
+    ]
+  },
+  {
+    "cluster": "group_7",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "The /comments section is vulnerable to injection of arbitrary code via user content.",
+        "endpoint": "/comments",
+        "id": 791,
+        "sensor": "ToolC",
+        "severity": "high",
+        "title": "Comments injection flaw"
+      },
+      {
+        "cve": "null",
+        "description": "Comment injection flaw at /comments endpoint allows attacker-supplied commands.",
+        "endpoint": "/comments",
+        "id": 766,
+        "sensor": "ToolB",
+        "severity": "high",
+        "title": "Comment injection in comments"
+      }
+    ]
+  },
+  {
+    "cluster": "group_8",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "SQL injection detected at the login endpoint. Possible to inject SQL commands.",
+        "endpoint": "/login",
+        "id": 792,
+        "sensor": "ToolB",
+        "severity": "medium",
+        "title": "SQL Injection vulnerability (login)"
+      },
+      {
+        "cve": "null",
+        "description": "Potential SQL injection vulnerability in the admin login flow, leading to database compromise.",
+        "endpoint": "/login",
+        "id": 788,
+        "sensor": "ToolD",
+        "severity": "critical",
+        "title": "Potential login SQL injection"
+      }
+    ]
+  },
+  {
+    "cluster": "group_9",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "An end-of-life Apache version is prone to server-side template injection attacks.",
+        "endpoint": "/apache",
+        "id": 796,
+        "sensor": "ToolC",
+        "severity": "medium",
+        "title": "SSTI vulnerability in EOL Apache"
+      },
+      {
+        "cve": "null",
+        "description": "Outdated Apache release allows server-side template injection if template engine is misconfigured.",
+        "endpoint": "/apache",
+        "id": 799,
+        "sensor": "ToolB",
+        "severity": "critical",
+        "title": "Apache 2.2.9 with SSTI flaw"
+      }
+    ]
+  },
+  {
+    "cluster": "group_10",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-1234",
+        "description": "Obsolete version 2.2.x can be exploited via SSTI, leading to arbitrary code execution.",
+        "endpoint": "/apache",
+        "id": 765,
+        "sensor": "ToolD",
+        "severity": "high",
+        "title": "Obsolete Apache vulnerable to template injection"
+      },
+      {
+        "cve": "CVE-2025-1234",
+        "description": "Apache 2.2.x is vulnerable to server-side template injection, potentially leading to RCE.",
+        "endpoint": "/apache",
+        "id": 768,
+        "sensor": "ToolA",
+        "severity": "high",
+        "title": "Server-Side Template Injection in old Apache"
+      }
+    ]
+  },
+  {
+    "cluster": "group_11",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "Malicious file upload possible if the upload endpoint is not validating file types.",
+        "endpoint": "/upload",
+        "id": 769,
+        "sensor": "ToolA",
+        "severity": "high",
+        "title": "Insecure file upload (upload endpoint)"
+      },
+      {
+        "cve": "null",
+        "description": "A file upload flaw at /upload can be exploited to run arbitrary code on the server.",
+        "endpoint": "/upload",
+        "id": 770,
+        "sensor": "ToolC",
+        "severity": "high",
+        "title": "File upload flaw in endpoint"
+      }
+    ]
+  },
+  {
+    "cluster": "group_12",
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2021-4444",
+        "description": "Attackers can upload arbitrary files via the upload endpoint, leading to RCE.",
+        "endpoint": "/upload",
+        "id": 780,
+        "sensor": "ToolB",
+        "severity": "critical",
+        "title": "Arbitrary file upload vulnerability"
+      },
+      {
+        "cve": "CVE-2021-4444",
+        "description": "The file upload endpoint accepts potentially harmful files without proper checks.",
+        "endpoint": "/upload",
+        "id": 781,
+        "sensor": "ToolD",
+        "severity": "medium",
+        "title": "Unauthenticated file upload vulnerability"
+      }
+    ]
+  },
+  {
+    "cluster": "group_13",
+    "vulnerabilities": [
+      {
+        "cve": "null",
+        "description": "Encryption mechanism in /api/encrypt is weak. allowing potential data exposure.",
+        "endpoint": "/api/encrypt",
+        "id": 784,
+        "sensor": "ToolD",
+        "severity": "medium",
+        "title": "Weak encryption in api encrypt"
+      },
+      {
+        "cve": "null",
+        "description": "Lack of HSTS policy in the /secure endpoint leads to potential SSL stripping attacks.",
+        "endpoint": "/secure",
+        "id": 789,
+        "sensor": "ToolB",
+        "severity": "low",
+        "title": "Missing HSTS policy"
+      },
+      {
+        "cve": "CVE-2028-0001",
+        "description": "Application accidentally exposes secret keys in the /secret route, allowing unauthorized access.",
+        "endpoint": "/secret",
+        "id": 771,
+        "sensor": "ToolA",
+        "severity": "medium",
+        "title": "Secret key exposure"
+      },
+      {
+        "cve": "CVE-2028-0002",
+        "description": "Malicious cache injection is possible in /assets, enabling attackers to serve rogue content.",
+        "endpoint": "/assets",
+        "id": 774,
+        "sensor": "ToolC",
+        "severity": "high",
+        "title": "Cache poisoning in /assets"
+      },
+      {
+        "cve": "CVE-2028-0003",
+        "description": "An unclaimed subdomain can be taken over, letting attackers host malicious content.",
+        "endpoint": "/subdomain",
+        "id": 775,
+        "sensor": "ToolC",
+        "severity": "critical",
+        "title": "Subdomain takeover vulnerability"
+      },
+      {
+        "cve": "CVE-2024-0001",
+        "description": "Attackers can manipulate file paths to access unauthorized directories in /files endpoint.",
+        "endpoint": "/files",
+        "id": 783,
+        "sensor": "ToolC",
+        "severity": "high",
+        "title": "Directory Traversal in files"
+      },
+      {
+        "cve": "null",
+        "description": "CRLF injection discovered in the /headers endpoint, allowing partial HTTP response splitting.",
+        "endpoint": "/headers",
+        "id": 798,
+        "sensor": "ToolA",
+        "severity": "medium",
+        "title": "CRLF injection in /headers"
+      }
+    ]
+  }
+]
